@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0b1326;
+  overflow-x: hidden;
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-animation-fast {
+  animation: float 4s ease-in-out infinite;
+}
+
+.float-animation-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* GLOW BLOBS */
+
+.glow-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(100px);
+  opacity: 0.3;
+  animation: blobMove 15s infinite alternate;
+}
+
+@keyframes blobMove {
+  from {
+    transform: translate(-5%, -5%);
+  }
+
+  to {
+    transform: translate(5%, 5%);
+  }
+}
+
+/* GLASS EFFECT */
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
